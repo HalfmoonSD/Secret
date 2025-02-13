@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #ffccd5;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #b30000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    background: #ff4d6d;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0px #b30000;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.pixel-btn {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    background-color: #ffccd5;
+    color: #b30000;
+    border: 4px solid #b30000;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 4px 4px 0px #b30000;
+}
+
+.pixel-btn:hover {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#yes-btn {
+    font-size: 16px;
+}
+
+.letter-container {
+    background: #ffc6d1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #b30000;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.letter {
+    background: white;
+    padding: 20px;
+    border: 4px solid #b30000;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: flex-start;
+    max-width: 700px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.letter-gif {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.message {
+    /* animation: typewriter 3s steps(20, end); */
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.line {
+    display: block;
+    width: 0; /* Start with zero width */
+    overflow: hidden; /* Needed for typing effect */
+    animation: messageAppear 3s linear forwards; /* Use linear for smooth animation */
+    align-items: left;
+}
+
+.line:nth-child(1) {
+    animation-delay: 0s;
+    padding-bottom: 10px;
+    
+}
+
+.line:nth-child(2) {
+    animation-delay: 1.5s; /* Adjusted delay */
+    padding-bottom: 10px;
+}
+
+.line:nth-child(3) {
+    animation-delay: 4s; /* Adjusted delay */
+    padding-bottom: 10px;
+}
+
+.line:nth-child(4) {
+    animation-delay: 8s; /* Adjusted delay */
+    padding-bottom: 10px;
+}
+
+.line:nth-child(5) {
+    animation-delay: 12s; /* Adjusted delay */
+    padding-bottom: 10px;
+}
+
+.line:nth-child(6) {
+    animation-delay: 15s; /* Adjusted delay */
+    padding-bottom: 10px;
+}
+.line:nth-child(7) {
+    animation-delay: 18s; /* Adjusted delay */
+    padding-bottom: 10px;
+}
+
+.line:nth-child(8) {
+    animation-delay: 20s; /* Adjusted delay */
+    padding-bottom: 10px;
+}
+
+/* Animations */
+@keyframes messageAppear {
+    from { width: 0; }
+    to { width: 100%; } /* Or a specific width if needed */
+}
+.carousel-inner img {
+    max-width: 100%;  /* Adjust this percentage to scale the image size */
+    max-height: 400px;  /* Set the maximum height */
+    object-fit: contain;  /* Ensures the image is scaled without distortion */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: #ff4081; /* Change to any color you prefer */
+    border-radius: 50%; /* Makes the buttons circular */
+    padding: 10px; /* Adjust size */
+    width: 50px; /* Adjust width */
+    height: 50px; /* Adjust height */
+    font-size: 30px; /* Adjust icon size */
+    color: white; /* Icon color */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: none; /* Hide default icons */
+}
+
+.carousel-control-prev:before {
+    font-family: "Font Awesome 5 Free"; /* FontAwesome */
+    font-weight: 900; /* Set correct font weight for icons */
+    content: "\f104"; /* FontAwesome left arrow icon */
+}
+
+.carousel-control-next:before {
+    font-family: "Font Awesome 5 Free"; /* FontAwesome */
+    font-weight: 900; /* Set correct font weight for icons */
+    content: "\f105"; /* FontAwesome right arrow icon */
+}
+
+/* Optional: Hover effect for better visibility */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: #ff1c80; /* Darker shade on hover */
+    cursor: pointer; /* Makes the pointer appear on hover */
+}
+
+/* Use Flexbox to center buttons in modal body */
+.carousel-inner {
+    display: flex;
+    justify-content: space-between; /* Position the buttons at each end */
+    align-items: center; /* Vertically center the buttons */
+    position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute; /* Position them at the sides */
+    top: 50%; /* Align vertically at the center */
+    transform: translateY(-50%); /* Adjust for exact centering */
+}
+
+/* Adjust specific left and right positioning */
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
